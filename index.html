@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerMint</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #222;
+    }
+
+    /* ---------------- NAVBAR ---------------- */
+    header {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #0b4d8a;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ff7a00;
+    }
+
+    /* ---------------- HERO ---------------- */
+    .hero {
+      background: linear-gradient(rgba(11,77,138,0.85), rgba(11,77,138,0.85)),
+        url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* ---------------- COMMON SECTION ---------------- */
+    .section {
+      padding: 70px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #ff7a00;
+      margin-bottom: 10px;
+    }
+
+    .section p.center {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    /* ---------------- STATS ---------------- */
+    .stats {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 20px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat h3 {
+      font-size: 32px;
+      color: #0b4d8a;
+    }
+
+    .stat span {
+      color: #ff7a00;
+      font-weight: 500;
+    }
+
+    /* ---------------- WHY CHOOSE US ---------------- */
+    .choose {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 40px;
+      align-items: center;
+    }
+
+    .choose img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .choose ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .choose li {
+      margin-bottom: 10px;
+    }
+
+    /* ================= TOP CATEGORIES (FULL SCREEN FIX) ================= */
+    .top-categories {
+      width: 100%;
+      min-height: 100vh;
+      background: #0b4d8a;
+      padding: 90px 30px;
+      text-align: center;
+    }
+
+    .top-categories h2 {
+      color: #fff;
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .top-categories p {
+      color: #dbe9f6;
+      margin-bottom: 60px;
+      font-size: 16px;
+    }
+
+    .tc-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .tc-card {
+      width: 230px;
+      height: 230px;
+      background: #fff;
+      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      font-weight: 600;
+      color: #0b4d8a;
+      font-size: 18px;
+    }
+
+    /* ---------------- SERVICES ---------------- */
+    .choose h3 {
+      margin-top: 15px;
+      color: #0b4d8a;
+    }
+
+    .choose a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #ff7a00;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer {
+      background: #0b4d8a;
+      color: #fff;
+      padding: 50px 20px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 30px;
+    }
+
+    footer h4 {
+      color: #ff7a00;
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: #ddd;
+      font-size: 14px;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <div class="navbar">
+    <div class="logo">CareerMint</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#">Students</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Register</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Welcome To CareerMint – Your Career Success Partner</h1>
+  <p>We bridge the gap between ambition and opportunity.</p>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="section">
+  <h2>What do we do?</h2>
+  <p class="center">We take pride in being a top-tier placement agency.</p>
+
+  <div class="stats">
+    <div class="stat"><h3>1K+</h3><span>Active Students</span></div>
+    <div class="stat"><h3>30+</h3><span>Active Colleges</span></div>
+    <div class="stat"><h3>10+</h3><span>Industry Experience</span></div>
+    <div class="stat"><h3>8+</h3><span>Awards Achieved</span></div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section choose">
+  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Students">
+  <div>
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>✔ Career Counseling & Training</li>
+      <li>✔ Recruitment Solutions</li>
+      <li>✔ College Admissions Support</li>
+      <li>✔ Placement Training & Mock Tests</li>
+      <li>✔ Corporate Consulting</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TOP CATEGORIES -->
+<section class="top-categories">
+  <h2>Our Top Categories</h2>
+  <p>We help you with any of these specializations.</p>
+
+  <div class="tc-grid">
+    <div class="tc-card">Engineering</div>
+    <div class="tc-card">Science & Tech</div>
+    <div class="tc-card">Management</div>
+    <div class="tc-card">Art & Law</div>
+    <div class="tc-card">Finance</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<!-- Our Services -->
+<section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="choose">
+    <div>
+    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" alt="Career Counseling">
+    <h3>Career Counseling & Training</h3>
+    <p>We provide personalized guidance to help individuals discover strengths and prepare for the job market.</p>
+    <a href="#">→ Know More</a>
+    </div>
+    <div>
+    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f" alt="Recruitment">
+    <h3>Recruitment Solutions</h3>
+    <p>We simplify recruitment with tech-driven strategies ensuring companies find the right talent.</p>
+    <a href="#">→ Know More</a>
+    </div>
+    <div>
+        <img src="https://ceatstudy.com/wp-content/uploads/2024/11/focus-indian-boy-who-standing-sepately-group-international-students-standing-together-park-university-2048x1365.jpg" alt="College Admissions">
+<h3>College Admissions Support</h3>
+<p>We connect aspiring students with colleges aligned to their career goals.</p>
+<a href="#">→ Know More</a>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="Placement Training">
+<h3>Placement Training & Mock Tests</h3>
+<p>Industry-focused training programs, aptitude tests, and mock interviews to boost placement success.</p>
+<a href="#">→ Know More</a>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7" alt="Skill Development">
+<h3>Skill Development Programs</h3>
+<p>Upskill with domain-specific, technical, and soft-skill programs designed for industry readiness.</p>
+<a href="#">→ Know More</a>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a" alt="Corporate Training">
+<h3>Corporate Training & Consulting</h3>
+<p>Customized training and consulting solutions to enhance workforce performance and productivity.</p>
+<a href="#">→ Know More</a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>About Us</h4>
+      <p>CareerMint is the one-stop solution for education and placements.</p>
+    </div>
+    <div>
+      <h4>Useful Links</h4>
+      <a href="#">Help Center</a>
+      <a href="#">Contact</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>+91 81215 02347</p>
+      <p>info@careermint.com</p>
+    </div>
+  </div>
+  <div class="copyright">© 2026 CareerMint</div>
+</footer>
+
+</body>
+</html>
